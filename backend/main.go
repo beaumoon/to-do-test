@@ -1,11 +1,5 @@
 package main
 
-<<<<<<< HEAD
-import "net/http"
-
-func main() {
-	// Your code here
-=======
 import (
 	"encoding/json"
 	"fmt"
@@ -40,15 +34,11 @@ func main() {
 	fmt.Println("Server is listening on port 8080...")
 	http.ListenAndServe(":8080", nil)
 
->>>>>>> b6e6ab2 (Completed test)
 }
 
 func ToDoListHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 
-<<<<<<< HEAD
-	// Your code here
-=======
 	// sets permissions for allowed HTTP requests & header types, and clarifies return type
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
@@ -84,5 +74,4 @@ func ToDoListHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
->>>>>>> b6e6ab2 (Completed test)
 }

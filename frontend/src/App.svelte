@@ -4,13 +4,10 @@
 
   let todos: TodoItem[] = $state([]);
 
-<<<<<<< HEAD
-=======
   // initiate variables to store the user's input title & description
   let new_title = "";
   let new_description = "";
 
->>>>>>> b6e6ab2 (Completed test)
   async function fetchTodos() {
     try {
       const response = await fetch("http://localhost:8080/");
@@ -25,8 +22,6 @@
     }
   }
 
-<<<<<<< HEAD
-=======
   async function writeTodo(title, description) {
 
     try {
@@ -51,18 +46,13 @@
 
   }
 
->>>>>>> b6e6ab2 (Completed test)
   // Initially fetch todos on page load
   $effect(() => {
     fetchTodos();
   });
 </script>
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b6e6ab2 (Completed test)
 <main class="app">
   <header class="app-header">
     <h1>TODO</h1>
@@ -74,20 +64,12 @@
     {/each}
   </div>
 
-<<<<<<< HEAD
-  <h2 class="todo-list-form-header">Add a Todo</h2>
-  <form class="todo-list-form">
-    <input placeholder="Title" name="title" />
-    <input placeholder="Description" name="description" />
-    <button>Add Todo</button>
-=======
   <!-- bound title & description input to variables to use as parameters in backend-pass function -->
   <h2 class="todo-list-form-header">Add a Todo</h2>
   <form class="todo-list-form">
     <input placeholder="Title" name="title" bind:value={new_title}/>
     <input placeholder="Description" name="description" bind:value={new_description}/>
     <button type="button" on:click={() => writeTodo(new_title, new_description)}>Add Todo</button>
->>>>>>> b6e6ab2 (Completed test)
   </form>
 </main>
 
